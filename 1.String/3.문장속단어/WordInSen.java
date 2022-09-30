@@ -13,6 +13,8 @@ public class WordInSen {
       }
       str = str.substring(pos + 1); // str 갱신
     }
+    if (str.length() > m)
+      answer = str;
     // String[] s = str.split(" ");
     // for (String x : s) {
     // int len = x.length();
