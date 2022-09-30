@@ -11,6 +11,7 @@ public class WordInSen {
         m = len;
         answer = tmp;
       }
+      str = str.substring(pos + 1); // str 갱신
     }
     // String[] s = str.split(" ");
     // for (String x : s) {
