@@ -13,7 +13,7 @@ public class WordInSen {
       }
       str = str.substring(pos + 1); // str 갱신
     }
-    if (str.length() > m)
+    if (str.length() > m) // 마지막 단어 처리 필수
       answer = str;
     // String[] s = str.split(" ");
     // for (String x : s) {
