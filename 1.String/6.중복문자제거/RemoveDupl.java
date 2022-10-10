@@ -19,5 +19,6 @@ public class RemoveDupl {
     Scanner kb = new Scanner(System.in);
     String str = kb.next();
     System.out.print(T.solution(str));
+    kb.close();
   }
 }

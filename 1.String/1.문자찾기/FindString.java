@@ -24,5 +24,6 @@ class FindString {
     String str = kb.next();
     char c = kb.next().charAt(0);
     System.out.print(fs.solution(str, c));
+    kb.close();
   }
 }

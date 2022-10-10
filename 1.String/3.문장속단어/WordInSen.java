@@ -32,5 +32,6 @@ public class WordInSen {
     Scanner kb = new Scanner(System.in);
     String str = kb.nextLine();
     System.out.println(T.solution(str));
+    kb.close();
   }
 }
