@@ -19,5 +19,7 @@ public class Secure {
     int n = kb.nextInt();
     String str = kb.next();
     System.out.println(T.solution(n, str));
+
+    kb.close();
   }
 }
