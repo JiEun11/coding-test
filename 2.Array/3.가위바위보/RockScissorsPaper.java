@@ -32,5 +32,6 @@ public class RockScissorsPaper {
     }
     for (char x : T.solution(n, a, b).toCharArray())
       System.out.println(x);
+    kb.close();
   }
 }
