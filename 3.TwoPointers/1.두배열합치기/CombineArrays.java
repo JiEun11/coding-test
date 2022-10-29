@@ -33,5 +33,7 @@ public class CombineArrays {
         }
 
         for(int x : T.solution(n, m, a, b)) System.out.print(x + " ");
+
+        kb.close();
     }
 }
