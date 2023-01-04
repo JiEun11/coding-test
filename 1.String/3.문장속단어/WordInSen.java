@@ -3,11 +3,12 @@ import java.util.*;
 public class WordInSen {
   public String solution(String str) {
     String answer = "";
-    int count = 0;
+    int lengthCount = Integer.MIN_VALUE;
     String[] wordList = str.split(" ");
     for(String word : wordList){
-      if(word.length() > count){
-        count = word.length();
+      int len = word.length();
+      if(len > lengthCount){
+        lengthCount = len;
         answer = word;
       }
     }
