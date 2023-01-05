@@ -4,10 +4,24 @@ public class ReverseWord {
   public ArrayList<String> solution(int n, String[] str) {
     ArrayList<String> answer = new ArrayList<>();
 
-    for(int i = 0; i < n; i++){
+    /*for(int i = 0; i < n; i++){
       StringBuffer sb = new StringBuffer(str[i]);
       String reversedStr = sb.reverse().toString();
       answer.add(reversedStr);
+    }*/
+    for(String x : str){
+      char[] s = x.toCharArray();
+      int lt = 0;
+      int rt = x.length()-1;
+      while(lt < rt){
+        char tmp = s[lt];
+        s[lt] = s[rt];
+        s[rt] = tmp;
+        lt++;
+        rt--;
+      }
+      String tmp = String.valueOf(s);
+      answer.add(tmp);
     }
     return answer;
 
