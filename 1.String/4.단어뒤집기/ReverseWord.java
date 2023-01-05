@@ -3,21 +3,11 @@ import java.util.*;
 public class ReverseWord {
   public ArrayList<String> solution(int n, String[] str) {
     ArrayList<String> answer = new ArrayList<>();
-    for (String x : str) {
-      char[] s = x.toCharArray();
-      int lt = 0, rt = x.length() - 1;
-      while (lt < rt) {
-        char tmp = s[lt];
-        s[lt] = s[rt];
-        s[rt] = tmp;
-        lt++;
-        rt--;
-      }
-      // String tmp = new StringBuilder(x).reverse().toString();
-      // answer.add(tmp);
 
-      String tmp = String.valueOf(s); // static으로 선언된 class method인 valueOf
-      answer.add(tmp);
+    for(int i = 0; i < n; i++){
+      StringBuffer sb = new StringBuffer(str[i]);
+      String reversedStr = sb.reverse().toString();
+      answer.add(reversedStr);
     }
     return answer;
 
