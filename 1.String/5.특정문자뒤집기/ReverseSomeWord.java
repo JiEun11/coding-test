@@ -7,13 +7,22 @@ class ReverseSomeWord {
     char[] s = str.toCharArray();
     int lt = 0, rt = str.length() - 1;
     while(lt < rt) {
-      char tmp = s[lt];
-      if((65 <= tmp && tmp <= 90) || (97 <= tmp && tmp <= 122) ){
+//      char tmp = s[lt];
+//      if((65 <= tmp && tmp <= 90) || (97 <= tmp && tmp <= 122) ){
+//        s[lt] = s[rt];
+//        s[rt] = tmp;
+//      }
+//      lt++;
+//      rt--;
+      if(!Character.isAlphabetic(s[lt])) lt++;
+      else if(!Character.isAlphabetic(s[rt])) rt--;
+      else{
+        char tmp = s[lt];
         s[lt] = s[rt];
         s[rt] = tmp;
+        lt++;
+        rt--;
       }
-      lt++;
-      rt--;
     }
     answer = String.valueOf(s);
     return answer;
