@@ -3,7 +3,7 @@ import java.util.*;
 public class PalindromeString {
 
   public String solution(String str) {
-    String answer = "NO";
+    /*String answer = "NO";
     int lt = 0;
     int rt = str.length()-1;
     String[] strArr = str.split("");
@@ -18,7 +18,20 @@ public class PalindromeString {
       }else{
         break;
       }
+    }*/
+
+    /*String answer = "NO";
+    String tmp = new StringBuilder(str).reverse().toString();
+    if(str.equalsaIgnoreCase(tmp)) answer = "YES";
+    */
+
+    String answer = "YES";
+    str = str.toUpperCase();
+    int len = str.length();
+    for(int i= 0; i<len/2; i++){
+      if(str.charAt(i) != str.charAt(len-i-1)) return "NO";
     }
+
     return answer;
 
   }
