@@ -2,12 +2,14 @@ import java.util.*;
 
 public class Palindrome {
   public String Solution(String s) {
-    String answer = "NO";
-    s = s.toUpperCase().replaceAll("[^A-Z]", ""); // A-Z까지가 아니면 이라는 정규식
-    String tmp = new StringBuilder(s).reverse().toString();
-    if (s.equals(tmp))
-      answer = "YES";
-
+    String answer = "YES";
+    String refinedStr = s.replaceAll("[^a-zA-Z]","");
+    System.out.println(refinedStr);
+    refinedStr = refinedStr.toLowerCase();
+    int len = refinedStr.length();
+    for(int i = 0; i < len/2; i++){
+      if(refinedStr.charAt(i) != refinedStr.charAt(len-i-1)) return "NO";
+    }
     return answer;
   }
 
