@@ -3,14 +3,10 @@ import java.util.*;
 public class ExtractNum {
 
   public int solution(String s) {
-    // int answer = 0;
     String answer = "";
-    for (char x : s.toCharArray()) { // 문자열 배열로 만들기
-      // if (x >= 48 && x <= 57) { // 이 사이에 있다는 건 문자라는 의미
-      // answer = answer * 10 + (x - 48);
-      // }
-      if (Character.isDigit(x)) {
-        answer += x;
+    for(char c : s.toCharArray()){
+      if(47 <= c && c <= 57){
+        answer += c;
       }
     }
 
