@@ -9,7 +9,7 @@ public class ExtractNum {
         answer += c;
       }
     }
-    return I*/nteger.parseInt(answer); // parseInt하면 0208 -> 208이 된다.
+    return Integer.parseInt(answer); // parseInt하면 0208 -> 208이 된다.*/
 
     /*int answer = 0;
     for(char x : s.toCharArray()){
