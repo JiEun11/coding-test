@@ -3,27 +3,29 @@ import java.util.*;
 public class Distance {
   public int[] solution(String s, char t) {
     int[] answer = new int[s.length()];
+    String[] strArr = s.split("");
     int p = 1000;
-    for (int i = 0; i < s.length(); i++) {
-      if (s.charAt(i) == t) {
+    for(int i =0; i< s.length(); i++){
+      if(s.charAt(i)==t){
         p = 0;
-        answer[i] = p;
-      } else {
+        answer[i]=p;
+      }else{
         p++;
-        answer[i] = p;
+        answer[i]=p;
       }
     }
-
-    p = 1000;
-    for (int i = s.length() - 1; i >= 0; i--) {
-      if (s.charAt(i) == t) {
+//    p=1000;
+    for(int i = s.length()-1 ; i>=0; i--){
+      if(s.charAt(i)==t){
         p = 0;
-        answer[i] = p;
-      } else {
+      }else{
         p++;
         answer[i] = Math.min(answer[i], p);
       }
     }
+
+
+
     return answer;
   }
 
