@@ -3,7 +3,7 @@ import java.util.*;
 public class Compression {
   public String solution(String s) {
     String answer = "";
-    int count = 0;
+    /*int count = 0;
     char c = s.charAt(0);
     answer += c;
     for(char letter : s.toCharArray()){
@@ -17,6 +17,19 @@ public class Compression {
         }
       }
       c = letter;
+    }*/
+    s = s + " ";
+    int cnt = 1;
+    for(int i = 0 ; i < s.length()-1; i++){
+      if(s.charAt(i)==s.charAt(i+1)){
+        cnt++;
+      }else{
+        answer += s.charAt(i);
+        if(cnt > 1){
+          answer += String.valueOf(cnt);
+          cnt = 1;
+        }
+      }
     }
     return answer;
   }
