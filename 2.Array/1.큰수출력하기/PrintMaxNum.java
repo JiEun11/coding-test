@@ -5,11 +5,16 @@ class PrintMaxNum {
   public ArrayList<Integer> solution(int n, int[] arr) {
     ArrayList<Integer> answer = new ArrayList<>();
     answer.add(arr[0]); // 첫 번째 수는 무조건 넣어주기
-    for(int i = 0; i < n ; i++){
+    for(int i = 0; i < n-1 ; i++){
       if(arr[i]<arr[i+1]){
         answer.add(arr[i+1]);
       }
     }
+//    for(int i =1; i< n; i++){
+//      if(arr[i]>arr[i-1]){
+//        answer.add(arr[i]);
+//      }
+//    }
 
     return answer;
   }
