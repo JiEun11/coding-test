@@ -5,11 +5,10 @@ public class SeeStudents {
   public int solution(int n, int[] arr) {
     int answer = 1;
     int max = arr[0];
-
-    for (int i = 1; i < n; i++) {
-      if (arr[i] > max) {
+    for(int height: arr){
+      if(max < height){
         answer++;
-        max = arr[i];
+        max = height;
       }
     }
     return answer;
