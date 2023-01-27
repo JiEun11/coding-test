@@ -2,6 +2,13 @@ import java.util.*;
 
 public class Fibonacci {
   public int[] solution(int n) {
+    /*  배열 쓰지 말고 손코딩 하라고 했을 경우
+    int a=1, b=1, c;
+    for(int i =2; i<n; i++){
+      c = a + b;
+      a = b;
+      b = c;
+    }*/
     int[] answer = new int[n];
     answer[0] = 1;
     answer[1] = 1;
