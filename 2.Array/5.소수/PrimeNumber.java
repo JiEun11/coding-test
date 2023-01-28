@@ -4,15 +4,17 @@ public class PrimeNumber {
 
     public int solution(int n){
         int answer = 0;
-        int[] ch = new int[n+1];
+        int[] count = new int[n];
+        int sum = 1;
         for(int i=2; i<=n; i++){
-            if(ch[i]==0){
-                answer++;
-                for(int j=i; j<=n; j=j+i){
-                    ch[j] = 1;
+            for(int j=1; j<=i; j++){
+                if(i%j==0){
+                    count[j-1]=sum;
+                    sum++;
                 }
             }
         }
+        System.out.println(count.toString());
         return answer;
     }
 
