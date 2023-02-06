@@ -5,6 +5,8 @@ public class ReversePrime {
 
     public boolean isPrime(int n){
         boolean isPrime = true;
+        // 소수에서 1은 제외
+        if(n==1) return false;
         // i : num에 나눌 값
         for(int i = 2; i<= n/2; i++){
             // 순차적으로 i를 num에 나누어본다.
