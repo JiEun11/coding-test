@@ -4,21 +4,24 @@ public class SumMax {
 
     public int solution(int n, int[][] arr){
         int answer = Integer.MIN_VALUE;
-        int sum1 = Integer.MIN_VALUE;
-        int sum2 = Integer.MIN_VALUE;
-        int sum3 = Integer.MIN_VALUE;
+        int sum1, sum2;
 
         for(int i = 0; i < n; i++){
+            sum1=sum2=0;
             for(int j = 0; j < n; j++){
                 sum1 += arr[i][j];   // 행의 합
                 sum2 += arr[j][i];   // 열의 합
-                if(i==j){
-                    sum3 += arr[i][j];
-                }
             }
-            answer = Math.max(sum1, sum2);
-            answer = Math.max(answer, sum3);
+            answer = Math.max(answer, sum1);
+            answer = Math.max(answer, sum2);
         }
+        sum1=sum2=0;
+        for(int i=0; i<n; i++){
+            sum1+=arr[i][i];
+            sum2+=arr[i][n-i-1];
+        }
+        answer = Math.max(answer, sum1);
+        answer = Math.max(answer, sum2);
 
         return answer;
     }
