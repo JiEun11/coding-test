@@ -6,20 +6,21 @@ public class ClassLeader {
         int answer = 0;
         int max = Integer.MIN_VALUE;
         for(int i = 1; i <= n; i++){
-            int cnt = 0;
-            for(int j = 1; j<=n; j++){
-                for(int k = 1; k<=5; k++){
+            int cnt = 0;    // i학생과 같은반이었던 j학생은 몇 명?
+            for(int j = 1; j <= n; j++){
+                for(int k =1; k<=5; k++){
                     if(arr[i][k]==arr[j][k]){
-                        cnt++;
-                        break;
+                        cnt++;      // 같으면 카운트 증가
+                        break;      // i학생 1번만 카운트니까
                     }
                 }
             }
-            if(cnt>max){
+            if(cnt > max){
                 max = cnt;
-                answer=i;
+                answer = i;
             }
         }
+
         return answer;
     }
 
